@@ -1,40 +1,54 @@
 WedGenProV2 - Premium Wedding Invitation Generator
 WedGenProV2 adalah platform generator undangan pernikahan digital berbasis web (Single Page Application) yang dirancang untuk memberikan pengalaman eksklusif, elegan, dan interaktif. Proyek ini merupakan evolusi dari versi sebelumnya, kini hadir dengan fitur RSVP real-time dan manajemen privasi informasi hadiah yang lebih etis.
 
-🚀 Fitur Utama
-Live Mobile Simulator: Editor intuitif dengan side-by-side preview yang memungkinkan kamu melihat perubahan desain secara langsung pada simulasi perangkat seluler.
+<img width="1273" height="611" alt="image" src="https://github.com/user-attachments/assets/dfaa0a66-dcd7-4e78-b364-e583e31a9223" />
 
-Real-time RSVP & Wishes (MQTT): Menggunakan protokol MQTT (HiveMQ Broker) untuk sinkronisasi ucapan dan konfirmasi kehadiran tamu secara instan tanpa perlu memuat ulang halaman.
+## ✨ Fitur Utama
 
-Privacy-First Gift Info: Informasi nomor rekening dan hadiah kini menggunakan sistem toggle (Klik untuk Menampilkan) untuk menjaga kesopanan dan etika dalam mengundang.
+- **Premium L01 Theme**: Desain bersih dan mewah dengan nuansa Beige/Cream serta dekorasi floral watercolor.
+- **Real-time RSVP & Ucapan (MQTT)**: Menggunakan protokol MQTT (HiveMQ Broker) sehingga ucapan dari tamu muncul secara instan di layar tanpa perlu refresh halaman.
+- **Dynamic Guest Name**: Personalisasi nama tamu secara otomatis melalui URL parameter (`?to=Nama+Tamu`).
+- **Guest Link Generator**: Dashboard khusus untuk membuat dan menyalin link undangan unik untuk setiap tamu secara otomatis.
+- **YouTube Music Integration**: Musik latar yang dapat dikustomisasi dan diputar otomatis saat undangan dibuka.
+- **Full Live Editor**: Ubah profil mempelai, jadwal acara, lokasi (Google Maps), galeri foto, hingga informasi hadiah (wedding gift) secara langsung.
+- **Standalone Export**: Hasil undangan dapat diekspor menjadi satu file HTML utuh yang siap dideploy ke GitHub Pages atau hosting lainnya.
 
-Single File Deployment: Seluruh aplikasi, logika, dan aset dibungkus dalam satu file HTML yang ringan dan mudah di-hosting di mana saja.
+## 🛠️ Teknologi yang Digunakan
 
-Custom Love Story & Gallery: Timeline perjalanan cinta yang estetik dan galeri foto dengan transisi halus.
+- **HTML5 & CSS3** (Custom Animations & Glassmorphism)
+- **Tailwind CSS** (Styling Framework)
+- **JavaScript (Vanilla)** (Logic & DOM Manipulation)
+- **MQTT.js** (Protokol komunikasi real-time via WebSockets)
+- **HiveMQ Public Broker** (Infrastruktur pesan real-time)
+- **FontAwesome & Google Fonts** (Tipografi & Ikonografi)
 
-One-Click Export: Fitur untuk mengekspor hasil konfigurasi menjadi file undangan statis yang siap disebarkan.
+## 🚀 Cara Penggunaan & Deployment
 
-🛠️ Teknologi yang Digunakan
-Core: React.js (v18)
+### 1. Menjalankan Secara Lokal
+Cukup buka file `index.html` di browser pilihan Anda (Chrome, Edge, atau Firefox).
 
-Styling: Tailwind CSS
+### 2. Deploy ke GitHub Pages (Gratis)
+1. Buat repositori baru di akun GitHub Anda.
+2. Upload file `index.html` ke repositori tersebut.
+3. Masuk ke tab **Settings** > **Pages**.
+4. Pada bagian **Build and deployment**, pilih branch `main` lalu klik **Save**.
+5. Tunggu 1-2 menit, dan undangan Anda akan aktif secara publik.
 
-Icons: Lucide Icons
+### 3. Cara Mengirim Undangan ke Tamu
+1. Buka link undangan yang sudah Anda deploy.
+2. Masuk ke tab **LINK TAMU** di sidebar editor.
+3. Masukkan nama tamu (Contoh: *Bapak Ahmad*).
+4. Klik **SALIN LINK LENGKAP**.
+5. Kirim link tersebut ke tamu melalui WhatsApp atau media sosial lainnya.
 
-Real-time Communication: MQTT.js & HiveMQ Broker
+## 📡 Monitoring RSVP via MQTT Explorer
+Jika Anda ingin memantau pesan masuk secara teknis melalui aplikasi **MQTT Explorer**:
+- **Host**: `broker.hivemq.com`
+- **Port**: `1883`
+- **Topic**: `linkzwire/wedding/bitterfly/v1/wishes` (atau sesuai konfigurasi di dashboard).
 
-Fonts: Google Fonts (Playfair Display, Poppins, Great Vibes)
+## 📝 Lisensi
+Proyek ini dibuat untuk keperluan edukasi dan personal. Silakan dikembangkan lebih lanjut.
 
-📖 Cara Penggunaan
-Buka file index.html di browser pilihanmu.
-
-Gunakan panel editor di sisi kiri untuk mengubah data mempelai, lokasi acara, hingga pengaturan MQTT.
-
-Pantau perubahan melalui simulator di sisi kanan.
-
-Klik tombol "Export HTML" untuk mengunduh undangan yang sudah jadi.
-
-Hosting file hasil export tersebut (misalnya di GitHub Pages atau Vercel) dan bagikan link-nya kepada tamu.
-
-✒️ Developer
-Project ini dikembangkan oleh Rivaldi (LinkzwireNode), seorang pendidik di bidang IoT & AI yang berbasis di Medan.
+---
+**Developed with ❤️ by LinkzwireNode**
